@@ -16,10 +16,62 @@
 var numeros = [];
 var numero = 0;
 
+//Pido 6 numeros por pantalla
+
+for(var i = 0; i < 6; i++){
+    numero = getNumber("Introduce un numero");
+    numberCheck(numero);
+    numeros.push(numero);
+}
+
+//Muestro los numeros en el body de la pagina y en la consola
+
+
+showFullArray(numeros, 'DESORDENADO');
+
+//Sacar el array odenado y mostrarlo por pantalla
+
+
+    numeros.sort((a, b) => a - b);
+    showFullArray(numeros, 'ORDENADO');
+
+
+//Sacar el array invertido y mostrarlos en pantalla
+
+    numeros.reverse();
+    showFullArray(numeros, ' ORDEN INVERSO');
+
+//Mostrar cuantos elementos tiene el array
+
+document.write('<h1> NUMERO DE ELEMENTOS DEL ARRAY</h1>');
+document.write('<p>El array tiene ' + (numeros.length) + ' elementos</p>');
+
+
+
+//Hacer una busqueda de un valor introducido por el usuario y que nos diga si existe en el array y cual es su indice
+
+var numeroIntroducido = numberCheck(getNumber("Introduce el numero que quieres buscar en el array"));
+var numeroIntroducidoVoF = numberExist (numeroIntroducido, numeros);
+
+    if(numeroIntroducidoVoF){
+        document.write('<h1> EL NUMERO ' + numeroIntroducido + ' EXISTE EN EL ARRAY EN LA POSICION:' + parseInt(numeros.indexOf(numeroIntroducido)) + '</h1>');
+    }else{
+        document.write('<h1> EL NUMERO ' + numeroIntroducido + ' NO EXISTE EN EL ARRAY</h1>');
+    }
+
+
+
+
 //Funciones auxiliares
 
-function showArray(indice, elemento){
-    return document.write('<p>'+ (indice+1) + 'º elemento ----- ' +elemento+ '</p>');
+
+function showFullArray(array, mensaje){
+    document.write('<h1> ARRAY ' + mensaje + '</h1>');
+    array.forEach((elemento, indice )=> {
+        document.write('<p>'+ (indice+1) + 'º elemento ----- ' +elemento+ '</p>');
+        console.log(elemento);
+    }); 
+
 }
 
 function getNumber(mensaje){
@@ -48,61 +100,3 @@ function numberExist(number, array){
     }
     return exist;
 }
-
-//Pido 6 numeros por pantalla
-
-for(var i = 0; i < 6; i++){
-    numero = getNumber("Introduce un numero");
-    numberCheck(numero);
-    numeros.push(numero);
-}
-
-//Muestro los numeros en el body de la pagina y en la consola
-
-document.write('<h1> ARRAY DESORDENADO</h1>');
-
-numeros.forEach((elemento, indice )=> {
-    showArray(indice, elemento);
-    console.log(elemento);
-}); 
-
-//Sacar el array odenado y mostrarlo por pantalla
-
-document.write('<h1> ARRAY ORDENADO</h1>');
-    numeros.sort((a, b) => a - b);
-    numeros.forEach((elemento, indice )=> {
-        showArray(indice, elemento);
-        console.log(elemento);
-    }); 
-
-
-//Sacar el array invertido y mostrarlos en pantalla
-
-document.write('<h1> ARRAY ORDEN INVERSO</h1>');
-    numeros.reverse();
-    numeros.forEach((elemento, indice )=> {
-        showArray(indice, elemento);
-        console.log(elemento);
-    }); 
-
-//Mostrar cuantos elementos tiene el array
-
-document.write('<h1> NUMERO DE ELEMENTOS DEL ARRAY</h1>');
-    document.write('<p>El array tiene ' + (numeros.length) + ' elementos</p>');
-
-
-
-//Hacer una busqueda de un valor introducido por el usuario y que nos diga si existe en el array y cual es su indice
-
-var numeroIntroducido = numberCheck(getNumber("Introduce el numero que quieres buscar en el array"));
-var numeroIntroducidoVoF = numberExist (numeroIntroducido, numeros);
-
-    if(numeroIntroducidoVoF){
-        document.write('<h1> EL NUMERO ' + numeroIntroducido + ' EXISTE EN EL ARRAY EN LA POSICION:' + parseInt(numeros.indexOf(numeroIntroducido)) + '</h1>');
-    }else{
-        document.write('<h1> EL NUMERO ' + numeroIntroducido + ' NO EXISTE EN EL ARRAY</h1>');
-    }
-
-
-
-
