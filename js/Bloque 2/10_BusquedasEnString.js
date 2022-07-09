@@ -33,5 +33,5 @@ console.log(busqueda);
     busqueda = texto1.endsWith("JavaScript"); //Busca si un string termina con un string
 console.log(busqueda);
 
-    busqueda = texto1.includes("JavaScript"); //Busca si un string contiene un string
+    busqueda = texto1.includes("JavaScript"); //Busca si un string contiene un string 
 console.log(busqueda);
