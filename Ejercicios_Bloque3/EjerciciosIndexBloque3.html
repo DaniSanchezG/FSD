@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Bloque 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="Ejercicio1.js"></script>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="formContainer">
+            <h2>Ejercicio DOM, Eventos y Funciones - Curso JS</h2>  
+            <form action="#" method="POST" id="form" onsubmit="return false">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Nombre">
+                <br />
+                <label for="surnames">Apellidos:</label>
+                <input type="text" id="surnames" name="surnames" placeholder="Apellidos">
+                <br />
+                <label for="age">Edad:</label>
+                <input type="text" id="age" name="age" placeholder="Edad">
+                <br />
+                <button type="submit" id="btnShowData">Enviar</button>
+            </form>
+        </div>
+        <div class="resultContainer">
+            <div id="result"></div>
+    </div>
+</body>
+</html>
+
+<!--
+
+    1.Formulario con los campos: nombre, apellido y edad
+    2.Boton de enviar el formulario: eventos submit
+    3.Mostrar esos datos por pantalla
+    4.Tener un boton que al darle click nos muestra los datos actuales del formulario
+
+-->
