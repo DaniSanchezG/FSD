@@ -1,0 +1,12 @@
+.zebra{
+    border: 5px dashed black;
+}
+
+.margen_superior{
+    display: block;
+    margin-top: 45px;
+}
+
+.resaltado{
+    border-bottom: 5px solid rgb(47, 188, 122);
+}
