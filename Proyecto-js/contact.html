@@ -18,7 +18,14 @@
         <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
         <!-----MomentJS---->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/es.min.js" type="text/javascript"></script>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/es.min.js" type="text/javascript"></script>   
+        <!--FormValidator--> 
+        <script src="js/form-validator/jquery.form-validator.js" type="text/javascript"></script>  
+        <!----jQueryUI----->  
+        <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.min.css" />
+        <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.structure.min.css" />
+        <link rel="stylesheet" href="js/jquery-ui-1.13.2/jquery-ui.theme.min.css" />
+        <script src="js/jquery-ui-1.13.2/jquery-ui.min.js" type="text/javascript"></script>
         <!----JS Propio---->
         <script src="js/main.js" type="text/javascript"></script>
         <!--MAIN CONTAINER-->
@@ -56,6 +63,29 @@
             </div>
             <!-- CONTENIDO -->
             <section id="content">
+                <div id="box">
+                    <h2>Contacto</h2>
+
+                    <form action="" method="POST" id="contactForm"> 
+                        <label>Nombre</label>
+                        <input data-validation="length" data-validation-length="min4" type="text" name="name" id="forName" placeholder="nombre">
+                        <label>Apellido</label>
+                        <input data-validation="length" data-validation-length="min4" type="text" name="name" id="forSurname" placeholder="apellidos">
+                        <label>Email</label>
+                        <input data-validation="email"type="email" name="name" id="forEmail" placeholder="email">
+                        <label>Sexo</label>
+                        <select name="forSex" id="forSex">
+                            <option value="undefined">No definir</option>
+                            <option value="woman">Mujer</option>
+                            <option value="man">Hombre</option>
+                        </select>
+                        <label>Edad</label>
+                        <input data-validation="number" type="number" name="age" id="forAge" placeholder="edad">
+                        <label>Fecha nacimiento</label>
+                        <input data-validation="birthdate" data-validation-format="dd/mm/yyyy" type="text" name="date" id="forDate" placeholder="fecha de nacimiento">
+                        <input type="submit" name="enviar"/>
+                    </form>
+                </div>
                 <aside id="sidebar">
                     <div id="about">
                         <h4><span>¿Quién soy?</span></h4>

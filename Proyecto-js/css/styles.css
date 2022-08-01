@@ -146,7 +146,9 @@
 
 form input[type="text"],
 form input[type="email"],
-form input[type="password"]{
+form input[type="password"],
+form input[type="number"],
+select{
     padding: 5px;
     border-radius: 2px;
     border: 1px solid #ccc;
@@ -228,4 +230,41 @@ footer{
     font-family: 'Electrolize', sans-serif;
     font-size: 110px;
     line-height: 190px;
+}
+
+#contactForm{
+    width: 50%;
+    margin-top: 15px;
+    font-family: Helvetica, Arial;
+}
+
+#contactForm label{
+    display: block;
+    margin-top: 5px;
+    width: 100%;
+}
+
+#contactForm span{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display:block;
+    margin-top: 20px;
+    width: 0 auto;
+    height: 100px;
+    background: rgb(255, 0, 0);
+    border-radius: 10px;
+    text-align: center;
+    font-family: Helvetica, Arial;
+    font-size: 20px;
+    color: white;
+}
+
+.form-error, .alert, .alert-danger{
+    background: red;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 10px;
+    color: white;
+    border-radius: 5px;
 }
